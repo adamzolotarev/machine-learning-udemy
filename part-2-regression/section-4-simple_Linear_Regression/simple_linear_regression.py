@@ -5,8 +5,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
-# plt.rcParams['backend'] = "Qt4Agg"
-
 # Importing the dataset
 dataset = pd.read_csv(
     '~/Dropbox/github/machine_learning_udemy/machine-learning-udemy/part-2-regression/section-4-simple_Linear_Regression/Salary_Data.csv')
@@ -32,8 +30,11 @@ from sklearn.linear_model import LinearRegression
 regressor = LinearRegression()
 regressor.fit(X_train, y_train)
 
+
 # Predicting the Test set results
 y_pred = regressor.predict(X_test)
+print(y_pred)
+# regressor.coef_
 
 # Visualising the Training set results
 plt.scatter(X_train, y_train, color='red')
@@ -42,7 +43,6 @@ plt.title('Salary vs Experience (Training set)')
 plt.xlabel('Years of Experience')
 plt.ylabel('Salary')
 plt.show()
-
 # Visualising the Test set results
 plt.scatter(X_test, y_test, color='red')
 plt.plot(X_train, regressor.predict(X_train), color='blue')
