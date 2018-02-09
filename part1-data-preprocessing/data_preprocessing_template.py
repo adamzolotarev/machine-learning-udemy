@@ -35,7 +35,8 @@ print(y_test)
 # X_train = sc_X.fit_transform(X_train)
 # X_test = sc_X.transform(X_test)
 # sc_y = StandardScaler()
-# y_train = sc_y.fit_transform(y_train)
+# y_train = sc_y.fit_transform(y_train) -no longer usable
+# y_train = np.ravel(sc_y.fit_transform(y_train.reshape(-1, 1)))
 
 # print(X_train)
 # print(X_test)
