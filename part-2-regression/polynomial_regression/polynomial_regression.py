@@ -52,6 +52,7 @@ plt.show()
 
 # Visualising the Polynomial Regression results (for higher resolution and smoother curve)
 X_grid = np.arange(min(X), max(X), 0.1)
+# We need a matrix instead of a vector:
 X_grid = X_grid.reshape((len(X_grid), 1))
 plt.scatter(X, y, color='red')
 plt.plot(X_grid, lin_reg_2.predict(
@@ -62,7 +63,7 @@ plt.ylabel('Salary')
 plt.show()
 
 # Predicting a new result with Linear Regression
-lin_reg.predict(6.5)
+print(lin_reg.predict(6.5))
 
 # Predicting a new result with Polynomial Regression
-lin_reg_2.predict(poly_reg.fit_transform(6.5))
+print(lin_reg_2.predict(poly_reg.fit_transform(6.5)))
