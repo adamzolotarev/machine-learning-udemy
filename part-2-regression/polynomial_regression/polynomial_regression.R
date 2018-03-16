@@ -1,7 +1,7 @@
 # Polynomial Regression
 
 # Importing the dataset
-dataset = read.csv('Position_Salaries.csv')
+dataset = read.csv('~/Dropbox/github/machine_learning_udemy/machine-learning-udemy/part-2-regression/Polynomial_Regression/Position_Salaries.csv')
 dataset = dataset[2:3]
 
 # Splitting the dataset into the Training set and Test set
