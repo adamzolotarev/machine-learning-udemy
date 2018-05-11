@@ -17,10 +17,11 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
+import os
+path = os.path.dirname(os.path.realpath(__file__))
 
 # Importing the dataset
-dataset = pd.read_csv(
-    '~/Dropbox/github/machine_learning_udemy/machine-learning-udemy/part-8-deep-learning/Artificial_Neural_Networks/Churn_Modelling.csv')
+dataset = pd.read_csv(path + '/Churn_Modelling.csv')
 X = dataset.iloc[:, 3:13].values
 y = dataset.iloc[:, 13].values
 
